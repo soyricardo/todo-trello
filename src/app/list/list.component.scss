@@ -1,0 +1,39 @@
+.list {
+    padding: 0.8em;
+    background: linear-gradient(to top, rgb(0, 3, 43), cornflowerblue);
+    border-radius: 0.1em;
+    box-shadow: 3px 2px #232323;
+    margin: 0.7em;
+    input {
+      all: unset;
+      border-bottom: 1px solid #232323;
+      color: white;
+      text-align: center;
+      width: 100%;
+    }
+  
+
+  i {
+    cursor: pointer;
+  }
+
+  .agregarTarea {
+    color: whitesmoke;
+    font-weight: bold;
+  }
+
+  .controls {
+    opacity: 0;
+    transition: opacity 400ms;
+    color: white;
+    text-decoration-color: aqua;
+  }
+  &:hover .controls {
+    opacity: 1;
+    color: white;
+  }
+  i {
+    cursor: pointer;
+  }
+}
+   

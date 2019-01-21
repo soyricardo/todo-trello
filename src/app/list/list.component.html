@@ -1,0 +1,54 @@
+<!-- <div class="list">
+    <h1>
+      <span [hidden]="editing" (dblclick)="edit(editInput)">{{ list.name }}</span>
+      <span [hidden]="!editing">
+        <input type="text" #editInput (keyup.enter)="editName()" 
+        (blur)="cancelEdit()" 
+        [(ngModel)]="newName" />
+      </span>
+    </h1>
+    <div class="tasks"><app-task *ngFor="let taskObj of list.tasks" [task]="taskObj">
+
+    </app-task></div>
+    <div class="controls">
+      <i (click)="delete()" class="material-icons">delete</i> <i (click)="edit(editInput)" class="material-icons">edit</i>
+      <input type="text" placeholder="add task" (keyup.enter)="newTask($event)" />
+    </div>
+  </div> -->
+
+  <div class="list">
+      <!-- <h1>{{ list.name }}</h1> -->
+      <h1>
+        <!-- otra forma de hacerlo -->
+       <!-- <span *ngIf="!editing" (dblclick)="edit()"> {{ list.name }} </span> -->
+        
+        <span [hidden]="editing" (dblclick)="edit(editInput)"> {{ list.name }} </span>
+        <span [hidden]="!editing">
+          <input type="text" 
+          #editInput (keyup.enter)="editName()"
+          (blur)="cancelEdit()" 
+          [(ngModel)]="newName">
+        </span>
+      </h1>
+       <!-- otra forma de hacerlo -->
+       <!-- <input *ngIf="!editing" type="text" (keyup.enter)="editName()"
+       (blur)="cancelEdit()" [(ngModel)="list.name"]> -->
+        
+       <!-- <input type="text" #editInput (keyup.enter)="editName()"
+       (blur)="cancelEdit()" [(ngModel)="newName"]> -->
+      
+  
+      <div class="tasks">
+        <app-task *ngFor="let taskObj of list.tasks" 
+        [task]="taskObj">
+        </app-task>
+      </div>
+      <div class="controls">
+        <i (click)="delete()" class="material-icons">delete</i>
+        <i (click)="edit(editInput)" class="material-icons">edit</i>
+        <input class="agregarTarea" type="text" placeholder="Añada la tarea!" (keyup.enter)="newTask($event)" />
+  
+      </div>
+  
+  
+    

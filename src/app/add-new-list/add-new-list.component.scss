@@ -1,0 +1,22 @@
+@import '../../variables.scss';
+
+header {
+  height: $headerHeight;
+  background: linear-gradient(to left, cornflowerblue, black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100vw;
+}
+input {
+  all: unset;
+  background: transparent;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+input::placeholder {
+  color: white;
+}
